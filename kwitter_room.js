@@ -37,3 +37,9 @@ function getData() {firebase.database().ref("/").on('value', function(snapshot) 
           localStorage.setItem("Room_name", name) ;
           window.location =  "kwitter_page.html"
     }
+    
+    function logout() {
+      localStorage.removeItem("user_name") ;
+      localStorage.removeItem("Room_name") ;
+      window.location = "index.html" 
+}
